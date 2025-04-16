@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La mulți ani, Doamna Profesoară!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="confetti-container"></div>
+
+    <!-- Secțiunea de felicitare -->
+    <section class="section" id="greeting-section">
+        <div class="card">
+            <div class="card-front">
+                <h1 class="title">La mulți ani!</h1>
+                <div class="cake">
+                    <div class="cake-base"></div>
+                    <div class="cake-middle"></div>
+                    <div class="cake-top"></div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                </div>
+                <p class="instruction">Click pentru a deschide felicitarea</p>
+            </div>
+            
+            <div class="card-inside">
+                <div class="message">
+                    <h2>La mulți ani, draga mea profesoară!</h2>
+                    <p>Vă mulțumesc pentru tot sprijinul și încurajarea oferite încă de la început. Datorită dumneavoastră, am putut să mă dezvolt în domeniul Web și să descopăr o pasiune care mi-a schimbat viața.</p>
+                    <p>Vă doresc multă sănătate, fericire și toate realizările pe care vi le doriți!</p>
+                    <div class="signature-container">
+                        <p class="signature">Cu recunoștință și respect,<br>Elevul dumneavoastră</p>
+                    </div>
+                </div>
+                <div class="balloons">
+                    <div class="balloon balloon-1"></div>
+                    <div class="balloon balloon-2"></div>
+                    <div class="balloon balloon-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gift-box">
+            <div class="gift-lid"></div>
+            <div class="gift-container"></div>
+            <div class="gift-ribbon"></div>
+            <div class="gift-bow"></div>
+        </div>
+
+        <button id="next-button" class="next-button">
+            Mergi mai departe <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </section>
+
+    <!-- Secțiunea de jocuri -->
+    <section class="section" id="games-section">
+        <h2 class="section-title">Jocuri distractive</h2>
+        <p class="section-subtitle">Alegeți un joc pentru a vă distra!</p>
+        <p class="section-subtitle">Completați toate cele 3 jocuri pentru a debloca accesul către galerie!</p>
+        
+        <div class="games-container">
+            <div class="game-card" id="game1">
+                <div class="game-icon">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                </div>
+                <h3>Quiz Web</h3>
+                <p>Testează-ți cunoștințele de Web Development</p>
+                <button class="play-button">Joacă</button>
+            </div>
+            
+            <div class="game-card" id="game2">
+                <div class="game-icon">
+                    <i class="fa-solid fa-memory"></i>
+                </div>
+                <h3>Memory Match</h3>
+                <p>Găsește perechile de simboluri HTML/CSS</p>
+                <button class="play-button">Joacă</button>
+            </div>
+            
+            <div class="game-card" id="game3">
+                <div class="game-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Code Puzzle</h3>
+                <p>Aranjează liniile de cod în ordinea corectă</p>
+                <button class="play-button">Joacă</button>
+            </div>
+        </div>
+
+        <!-- Game 1: Quiz Web -->
+        <div class="game-content" id="game1-content">
+            <h3>Quiz Web</h3>
+            <div class="quiz-container">
+                <div class="quiz-question" id="question-container">
+                    <p id="question-text">Care dintre următoarele este un limbaj de marcare?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-correct="true">HTML</button>
+                        <button class="quiz-option">JavaScript</button>
+                        <button class="quiz-option">Python</button>
+                        <button class="quiz-option">PHP</button>
+                    </div>
+                </div>
+                <div id="quiz-result"></div>
+                <button id="next-question" class="quiz-button">Următoarea întrebare</button>
+            </div>
+            <button class="back-to-games">Înapoi la jocuri</button>
+        </div>
+
+        <!-- Game 2: Memory Match -->
+        <div class="game-content" id="game2-content">
+            <h3>Memory Match</h3>
+            <div class="memory-game">
+                <div class="memory-cards" id="memory-container"></div>
+                <div class="memory-stats">
+                    <p>Perechi găsite: <span id="pairs-found">0</span>/8</p>
+                    <p>Încercări: <span id="attempts">0</span></p>
+                </div>
+            </div>
+            <button class="back-to-games">Înapoi la jocuri</button>
+        </div>
+
+        <!-- Game 3: Code Puzzle -->
+        <div class="game-content" id="game3-content">
+            <h3>Code Puzzle</h3>
+            <div class="code-puzzle">
+                <p>Aranjează liniile de cod pentru a crea un buton HTML cu stil CSS:</p>
+                <div class="code-lines" id="code-container"></div>
+                <button id="check-code" class="quiz-button">Verifică codul</button>
+                <div id="code-result"></div>
+            </div>
+            <button class="back-to-games">Înapoi la jocuri</button>
+        </div>
+
+        <div class="gallery-button-container">
+            <div id="games-message" class="games-message"></div>
+            <button id="final-button" class="next-button">
+                Vezi galeria <i class="fa-solid fa-images"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Secțiunea de galerie -->
+    <section class="section" id="gallery-section">
+        <h2 class="section-title">Călătoria noastră prin Web</h2>
+        <p class="section-subtitle">Momente frumoase și amintiri de neuitat</p>
+        
+        <div class="back-to-home-container">
+            <button id="back-to-home" class="back-button">
+                <i class="fa-solid fa-home"></i> Înapoi la felicitare
+            </button>
+        </div>
+        
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <div class="gallery-photo">
+                    <div class="photo-placeholder">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                </div>
+                <div class="gallery-text">
+                    <h3>Primul proiect</h3>
+                    <p>Prima pagină web creată împreună în 2022. Începutul unei călătorii minunate.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-photo">
+                    <div class="photo-placeholder">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                </div>
+                <div class="gallery-text">
+                    <h3>Hackathon</h3>
+                    <p>Participarea la primul hackathon și primele ore de codare fără oprire.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-photo">
+                    <div class="photo-placeholder">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                </div>
+                <div class="gallery-text">
+                    <h3>Prima prezentare</h3>
+                    <p>Momentul când am prezentat primul proiect în fața clasei și am primit aplauze.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="final-message">
+            <h2>Mulțumesc pentru tot!</h2>
+            <p>Sunteți nu doar o profesoară, ci și un mentor și o sursă de inspirație.</p>
+            <p>La mulți ani fericiți!</p>
+        </div>
+
+        <button id="restart-button" class="next-button">
+            Începe din nou <i class="fa-solid fa-redo"></i>
+        </button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
