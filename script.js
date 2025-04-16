@@ -799,6 +799,17 @@ document.querySelector('.code-back').addEventListener('click', function() {
     document.getElementById('final-button').style.opacity = '1';
 });
 
+// Adăugăm event listener pentru butonul de galerie
+document.getElementById('final-button').addEventListener('click', function(e) {
+    if (!this.classList.contains('disabled')) {
+        // În loc să afișăm secțiunea din aceeași pagină, redirectăm către gallery.html
+        window.location.href = 'gallery.html';
+    } else {
+        e.preventDefault();
+        alert('Trebuie să finalizați toate cele 3 jocuri pentru a accesa galeria!');
+    }
+});
+
 // Inițializăm confetti și pagina la încărcarea paginii
 window.addEventListener('load', () => {
     startConfetti();
