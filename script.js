@@ -74,13 +74,8 @@ nextButton.addEventListener('click', function() {
 finalButton.addEventListener('click', function() {
     // Redirecționăm către pagina de galerie dacă toate jocurile sunt completate
     if (completedGames.game1 && completedGames.game2 && completedGames.game3) {
-        // Dacă e un link extern, folosim window.location.href
-        // window.location.href = "gallery.html";
-        
-        // Dacă e o secțiune în aceeași pagină, afișăm secțiunea
-        gamesSection.classList.remove('active');
-        gallerySection.classList.add('active');
-        startConfetti(); // Adăugăm confetti pentru sărbătorire
+        // Redirecționăm către pagina gallery.html
+        window.location.href = "gallery.html";
     } else {
         // Indicăm utilizatorului că trebuie să termine toate jocurile
         alert('Trebuie să finalizați toate cele 3 jocuri pentru a debloca accesul la galerie!');
